@@ -10,6 +10,6 @@ def test_count():
 
 
 def test_report():
-    actual = get_citations_needed_report("https://en.wikipedia.org/wiki/History_of_Mexico")[0][0][:62]
-    expected = 'The written history of Mexico spans more than three millennia.'
+    actual = get_citations_needed_report("https://en.wikipedia.org/wiki/History_of_Mexico")[0][:50]
+    expected = 'The first people to settle in Mexico encountered a'
     assert actual == expected

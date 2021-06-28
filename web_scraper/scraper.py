@@ -19,11 +19,10 @@ def get_citations_needed_report(URL):
   reports=[]
 
   for result in all_results:
-    res=result.parent.parent.parent.parent
-    p=res.find('p').text.strip()
-    span=res.find('span').text.strip()
+    res=result.parent.parent.parent
+    p=res.text.strip()
   
-    reports.append([p,span])
+    reports.append(p)
 
   # Write results to json file
   file_content = json.dumps(reports)
